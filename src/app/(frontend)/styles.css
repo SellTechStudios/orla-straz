@@ -4,24 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-container {
-  background-image: linear-gradient(
-    135deg,
-    #e9e8e8 25%,
-    #e0e0e0 25%,
-    #e0e0e0 50%,
-    #e9e8e8 50%,
-    #e9e8e8 75%,
-    #e0e0e0 75%,
-    #e0e0e0 100%
-  );
-  background-size: 10px 10px;
-}
-
 @layer base {
   html {
     font-family: 'Montserrat', sans-serif;
-    @apply text-regular bg-background antialiased;
+    @apply text-regular bg-[#F2F2F2] antialiased;
     font-size: 16px;
+  }
+
+  h1 {
+    @apply text-4xl my-12 after:block after:w-full after:mt-1 after:h-[4px] after:content-[''] after:border-accent after:border-b after:border-t;
+  }
+
+  h2 {
+    @apply text-3xl my-10 after:block after:w-full after:mt-1 after:h-[4px] after:content-[''] after:border-accent after:border-b after:border-t;
+  }
+
+  h3 {
+    @apply text-xl my-8;
   }
 }

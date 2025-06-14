@@ -7,7 +7,5 @@ type Props = {
 }
 
 export const Container: React.FC<Props> = (props) => (
-  <div className={cn('container mx-auto px-4 md:px-4 lg:px-8', props.className)}>
-    {props.children}
-  </div>
+  <div className={cn('container mx-auto', props.className)}>{props.children}</div>
 )

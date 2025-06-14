@@ -54,11 +54,11 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-row justify-between felx">
           <div>
-            <h2 className="uppercase">Kontakt</h2>
+            <h3 className="uppercase">Kontakt</h3>
           </div>
 
           <div>
-            <h2 className="uppercase">Instagram</h2>
+            <h3 className="uppercase">Instagram</h3>
           </div>
         </div>
       </Container>
