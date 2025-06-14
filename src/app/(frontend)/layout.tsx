@@ -1,6 +1,5 @@
 import './styles.css'
 
-import { Container } from '@/components/Container'
 import Footer from '@/components/LayoutComponents/Footer'
 import Header from '@/components/LayoutComponents/Header'
 import { InitTheme } from '@/providers/Theme/InitTheme'
@@ -27,9 +26,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Header />
-            <div className="flex-1 bg-white shadow-sm mx-auto mb-8 p-8 container">
-              <Container className="flex flex-col flex-1">{children}</Container>
-            </div>
+            <div>{children}</div>
             <Footer />
           </div>
         </Providers>

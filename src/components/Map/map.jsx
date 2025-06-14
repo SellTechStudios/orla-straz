@@ -14,9 +14,14 @@ const MapComponent = () => {
     lng: 18.3569395,
   }
 
+  const options = {
+    gestureHandling: 'greedy', // or 'greedy'
+    scrollwheel: true,
+  }
+
   return (
     <LoadScript googleMapsApiKey="AIzaSyArnAD5XLctqjrjkFzpHQyZbAdHK0YPlvs">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={14} center={defaultCenter} />
+      <GoogleMap mapContainerStyle={mapStyles} zoom={14} center={defaultCenter} options={options} />
     </LoadScript>
   )
 }

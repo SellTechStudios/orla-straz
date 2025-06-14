@@ -1,5 +1,6 @@
 import './styles.css'
 
+import { ContactNoTeamFound } from '@/components/ContactNoTeamFound/ContactNoTeamFound'
 import { Container } from '@/components/Container'
 import MapComponent from '@/components/Map/map'
 import OurTeams from '@/components/OurTeams/OurTeams'
@@ -13,10 +14,8 @@ export default async function HomePage() {
         <OurTeams />
       </Container>
 
-      <Container>
-        <h2>Lub poszukaj na mapie najbliższych wolonatriuszy</h2>
-        <MapComponent />
-      </Container>
+      <ContactNoTeamFound />
+      <MapComponent />
     </div>
   )
 }
