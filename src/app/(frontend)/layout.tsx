@@ -1,11 +1,10 @@
 import './styles.css'
-
-import Footer from '@/components/LayoutComponents/Footer'
-import Header from '@/components/LayoutComponents/Header'
-import { InitTheme } from '@/providers/Theme/InitTheme'
 import { Metadata } from 'next'
-import { Providers } from '@/providers'
 import React from 'react'
+import Footer from '@/app/(frontend)/(layout-components)/Footer'
+import Header from '@/app/(frontend)/(layout-components)/Header'
+import { Providers } from '@/providers'
+import { InitTheme } from '@/providers/Theme/InitTheme'
 
 export const metadata: Metadata = {
   description: 'A blank template using Payload in a Next.js app.',

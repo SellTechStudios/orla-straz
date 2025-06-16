@@ -1,10 +1,9 @@
 import './styles.css'
-
-import { ContactNoTeamFound } from '@/components/ContactNoTeamFound/ContactNoTeamFound'
-import { Container } from '@/components/Container'
-import MapComponent from '@/components/Map/map'
-import OurTeams from '@/components/OurTeams/OurTeams'
 import React from 'react'
+import { ContactNoTeamFound } from '@/app/(frontend)/(page-components)/ContactNoTeamFound/ContactNoTeamFound'
+import MapComponent from '@/app/(frontend)/(page-components)/Map/map'
+import OurTeams from '@/app/(frontend)/(page-components)/OurTeams/OurTeams'
+import { Container } from '@/components/Container'
 
 export default async function HomePage() {
   return (
