@@ -1,8 +1,8 @@
 import './styles.css'
 import { Metadata } from 'next'
 import React from 'react'
-import Footer from '@/app/(frontend)/(layout-components)/Footer'
-import Header from '@/app/(frontend)/(layout-components)/Header'
+import Footer from '@/app/(frontend)/(layout-components)/Footer/Footer'
+import Header from '@/app/(frontend)/(layout-components)/Header/Header'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 
