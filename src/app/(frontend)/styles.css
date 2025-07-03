@@ -1,33 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat,wght@500,600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    font-family: 'Montserrat', sans-serif;
-    @apply bg-white text-regular antialiased;
-    font-size: 16px;
-  }
-
-  h1 {
-    @apply after:block my-12 after:mt-1 after:border-accent after:border-t after:border-b after:w-full after:h-[4px] text-4xl after:content-[''];
-  }
-
-  h2 {
-    @apply after:block my-10 after:mt-1 after:border-accent after:border-t after:border-b after:w-full after:h-[4px] text-3xl after:content-[''];
-  }
-
-  h3 {
-    @apply my-8 text-xl;
-  }
-
-  a {
-    @apply transition-opacity duration-150;
-  }
-
-  a:hover {
-    opacity: 0.8;
+    font-family: 'Oswald';
   }
 }

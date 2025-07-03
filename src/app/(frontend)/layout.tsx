@@ -1,4 +1,10 @@
-import './styles.css'
+// import './styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './css/fontawesome.css'
+import './css/custom-animation.css'
+import './css/style.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 import { Metadata } from 'next'
 import React from 'react'
 import Footer from '@/app/(frontend)/(layout-components)/Footer/Footer'
@@ -17,14 +23,14 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <InitTheme />
+        {/* <InitTheme /> */}
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </head>
       <body>
         <Providers>
           <div className="flex flex-col min-h-screen">
-            <Header />
+            {/* <Header /> */}
             <div>{children}</div>
             <Footer />
           </div>

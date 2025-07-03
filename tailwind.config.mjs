@@ -13,7 +13,7 @@ const config = {
       transparent: 'transparent',
     },
     fontFamily: {
-      body: ['Montserrat', 'sans-serif'],
+      body: ['Oswald', 'sans-serif'],
     },
     letterSpacing: {
       normal: '0',

@@ -1,53 +1,130 @@
 /* eslint-disable @next/next/no-img-element */
-
 import React from 'react'
-import { TfiEmail, TfiHeadphoneAlt, TfiInfoAlt } from 'react-icons/tfi'
-import { Container } from '../../../../components/Container'
-import AddressDetails from './ContactDetails/AddressDetails'
-import PhoneDetails from './ContactDetails/PhoneDetails'
-import SocialMediaLinks from './ContactDetails/SocialMediaLinks'
+import shape from './images/footerShape2.png'
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="flex justify-center items-center bg-[url('/photos/children-in-line.webp')] bg-cover bg-no-repeat bg-center py-20 text-white">
-      <Container className="brightness-100">
-        <div className="flex flex-row justify-between items-center mb-16 pb-16 border-white/10 border-b-[1px]">
-          <div className="flex flex-1">
-            <img src="/logo/logo.png" width={120} alt="Logo" />
+    <footer className="pt-70 pb-40 footer footer--bg footer--styleOne">
+      <img src={shape.src} alt="Gainioz Shape" className="footer__shape" />
+      <div className="container">
+        <div className="align-items-center row">
+          <div className="col">
+            <div className="footer__logo">
+              <img src="/logo/logo.png" width={120} alt="Logo" />
+            </div>
           </div>
-
-          <div className="flex flex-1 justify-center">
-            <a
-              target="_blank"
-              href="https://orlastraz.org/wspieram-2/"
-              className="bg-accentDark shadow-md px-8 py-4 rounded-full text-white uppercase"
-            >
-              Wspieram
-            </a>
+          <div className="col">
+            <div className="footer__social itSocial">
+              <ul>
+                <li>
+                  <a
+                    className="facebook"
+                    href="https://www.facebook.com/orlastraz"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="instagram"
+                    href="https://www.instagram.com/orlastraz/"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="youtube"
+                    href="https://www.youtube.com/channel/UC7TMSa6MaLja66liaNSr51g"
+                    target="_blank"
+                    rel="nofollow"
+                  >
+                    <i className="fab fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div className="flex flex-1 justify-end">
-            <SocialMediaLinks />
+          <div className="col-12">
+            <hr className="footer__line" />
           </div>
         </div>
-
-        <div className="flex flex-row justify-between opacity-50">
-          <div className="items-start gap-4 grid grid-cols-[auto_1fr]">
-            <TfiInfoAlt className="mt-1" />
-            <AddressDetails />
-
-            <TfiHeadphoneAlt className="mt-1" />
-            <PhoneDetails />
-
-            <TfiEmail className="mt-1" />
-            <a href="mailto:fundacja@orlastraz.org">fundacja@orlastraz.org</a>
-          </div>
-
-          <div>
-            <h3 className="uppercase">Instagram</h3>
+        <div className="row">
+          <div className="pt-65 pb-35 footer__middle">
+            <div className="justify-content-between row">
+              <div className="mb-30 col-lg-2 col-md-4">
+                <div className="footer__widget">
+                  <div className="footer__title">
+                    <h2 className="text-white text-uppercase footer__heading">Kontakt</h2>
+                  </div>
+                  <div className="footer__menu">
+                    <div>
+                      <span className="fw-bold">Fundacja Orla Straż</span>
+                      <br />
+                      <span>ul. Bartników 12, 84-207 Bojano</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-30 col-lg-2 col-md-4">
+                <div className="footer__widget">
+                  <div className="footer__title">
+                    <h2 className="text-white text-uppercase footer__heading">Wspieraj Nas</h2>
+                  </div>
+                  <div className="footer__menu">
+                    <ul>
+                      <li>
+                        <a href="#">Przekaż Darowiznę</a>
+                      </li>
+                      <li>
+                        <a href="#">Zostań wolontariuszem</a>
+                      </li>
+                      <li>
+                        <a href="#">Skorzystaj z usługi</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-30 col-lg-2 col-md-4">
+                <div className="footer__widget">
+                  <div className="footer__title">
+                    <h2 className="text-white text-uppercase footer__heading">Przydatne Linki</h2>
+                  </div>
+                  <div className="footer__menu">
+                    <ul>
+                      <li>
+                        <a href="#">Home</a>
+                      </li>
+                      <li>
+                        <a href="#">O Nas</a>
+                      </li>
+                      <li>
+                        <a href="#">Kontakt</a>
+                      </li>
+                      <li>
+                        <a href="#">Aktywne Projekty</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-30 text-right col-lg-5">
+                <div className="footer__widget">
+                  <div className="footer__title">
+                    <h2 className="text-white text-uppercase footer__heading">Instagram</h2>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }
