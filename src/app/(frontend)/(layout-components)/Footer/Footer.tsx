@@ -33,13 +33,13 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-row justify-between opacity-50">
           <div className="items-start gap-4 grid grid-cols-[auto_1fr]">
-            <TfiInfoAlt />
+            <TfiInfoAlt className="mt-1" />
             <AddressDetails />
 
-            <TfiHeadphoneAlt />
+            <TfiHeadphoneAlt className="mt-1" />
             <PhoneDetails />
 
-            <TfiEmail />
+            <TfiEmail className="mt-1" />
             <a href="mailto:fundacja@orlastraz.org">fundacja@orlastraz.org</a>
           </div>
 

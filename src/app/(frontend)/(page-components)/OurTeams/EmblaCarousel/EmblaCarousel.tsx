@@ -1,20 +1,20 @@
+'use client'
 import './embla.css'
-
-import CarouselCard, { CarouselCardProps } from './CarouselCard'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
-
 import { EmblaOptionsType } from 'embla-carousel'
-import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import React from 'react'
+import { Team } from '@/payload-types'
+import CarouselCard from './CarouselCard'
+import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
+import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 
 type PropType = {
-  slides: CarouselCardProps[]
+  teams: Team[]
   options?: EmblaOptionsType
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
+  const { teams, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi)
@@ -26,9 +26,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slide) => (
-            <div className="embla__slide" key={slide.id}>
-              <CarouselCard id={slide.id} title={slide.title} image={slide.image} />
+          {teams.map((team) => (
+            <div className="embla__slide" key={team.id}>
+              <CarouselCard team={team} />
             </div>
           ))}
         </div>

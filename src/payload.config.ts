@@ -1,11 +1,12 @@
-import { Media } from './payload/collections/Media'
-import { Users } from './payload/collections/Users'
-import { buildConfig } from 'payload'
-import { fileURLToPath } from 'url'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import path from 'path'
+import { buildConfig } from 'payload'
 import sharp from 'sharp'
+import { fileURLToPath } from 'url'
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { Media } from './payload/collections/Media'
+import { Teams } from './payload/collections/Teams'
+import { Users } from './payload/collections/Users'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -21,7 +22,7 @@ export default buildConfig({
       password: process.env.ADMIN_PASSWORD || '',
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Teams],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
