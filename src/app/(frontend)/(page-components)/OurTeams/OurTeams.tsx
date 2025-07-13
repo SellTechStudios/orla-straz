@@ -14,5 +14,23 @@ export default async function OurTeams() {
     depth: 1,
   })
 
-  return <EmblaCarousel teams={teams.docs} options={OPTIONS} />
+  const testTeams = [
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+    teams.docs[0],
+  ]
+
+  return (
+    <div className="container">
+      <h2 style={{ textTransform: 'uppercase' }}>Poznaj nasze zespoły</h2>
+      <EmblaCarousel teams={testTeams} options={OPTIONS} />
+    </div>
+  )
 }

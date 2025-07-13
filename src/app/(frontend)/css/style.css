@@ -2920,8 +2920,8 @@ html {
   padding-bottom: 135px;
   position: relative;
   z-index: 1;
-  background-position: right;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 @media (max-width: 991px) {
@@ -3602,7 +3602,6 @@ img.map-about-tab {
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-  background-image: url(./images/featuredCateShape1.png);
   min-width: 152px;
   min-height: 64px;
   background-repeat: no-repeat;
