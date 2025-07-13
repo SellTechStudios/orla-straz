@@ -20,9 +20,16 @@ const MapComponent = () => {
   }
 
   return (
-    <LoadScript googleMapsApiKey="AIzaSyArnAD5XLctqjrjkFzpHQyZbAdHK0YPlvs">
-      <GoogleMap mapContainerStyle={mapStyles} zoom={14} center={defaultCenter} options={options} />
-    </LoadScript>
+    <div children="container">
+      <LoadScript googleMapsApiKey="AIzaSyArnAD5XLctqjrjkFzpHQyZbAdHK0YPlvs">
+        <GoogleMap
+          mapContainerStyle={mapStyles}
+          zoom={14}
+          center={defaultCenter}
+          options={options}
+        />
+      </LoadScript>
+    </div>
   )
 }
 
