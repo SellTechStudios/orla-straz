@@ -36,7 +36,7 @@ const HowCanYouHelp = () => {
         <div className="flex flex-row gap-16 between">
           <Fade cascade damping={0.2} triggerOnce={true}>
             {Features.map((features, fitem) => (
-              <div className="relative bg-white p-10 pt-18 col-lg-4 col-md-6 col-12">
+              <div className="relative bg-white p-10 pt-18 col-lg-4 col-md-6 col-12" key={fitem}>
                 <img
                   src={features.icon}
                   className="top-[-41px] absolute bg-white shadow-xs p-5 border-[#f1f1f1] border-1 hover:border-[#eb9309] rounded-full transition-colors duration-300"
