@@ -1,18 +1,22 @@
-// import './styles.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './css/fontawesome.css'
-import './css/custom-animation.css'
-import './css/style.css'
-// import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
-import { Metadata } from 'next'
 import React from 'react'
-import Footer from '@/app/(frontend)/(layout-components)/Footer/Footer'
-import Header from '@/app/(frontend)/(layout-components)/Header/Header'
-import { Providers } from '@/providers'
-import { InitTheme } from '@/providers/Theme/InitTheme'
+import './styles.css'
+import Footer from './(layout-components)/Footer/Footer'
+import { Oswald, Source_Code_Pro } from 'next/font/google'
+import Header from './(layout-components)/Header/Header'
 
-export const metadata: Metadata = {
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-oswald',
+})
+
+const sourceCodePro = Source_Code_Pro({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-source-code-pro',
+})
+
+export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
   title: 'Payload Blank Template',
 }
@@ -21,20 +25,12 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
 
   return (
-    <html lang="en">
-      <head>
-        {/* <InitTheme /> */}
-        <link href="/favicon.ico" rel="icon" sizes="32x32" />
-        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
-      </head>
-      <body>
-        <Providers>
-          <div className="flex flex-col min-h-screen">
-            {/* <Header /> */}
-            <div>{children}</div>
-            <Footer />
-          </div>
-        </Providers>
+    <html lang="en" className={`${oswald.variable} ${sourceCodePro.variable}`}>
+      <head></head>
+      <body className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1 mb-40">{children}</main>
+        <Footer />
       </body>
     </html>
   )

@@ -28,8 +28,8 @@ export default async function OurTeams() {
   ]
 
   return (
-    <div className="container">
-      <h2 style={{ textTransform: 'uppercase' }}>Poznaj nasze zespoły</h2>
+    <div id="our-teams" className="container mx-auto">
+      <h2>Poznaj nasze zespoły</h2>
       <EmblaCarousel teams={testTeams} options={OPTIONS} />
     </div>
   )

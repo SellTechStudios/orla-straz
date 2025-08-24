@@ -138,7 +138,7 @@ const TagsArrayComponent: ArrayFieldClientComponent = ({ path, field, ...props }
       <div style={{ marginTop: '12px', display: 'flex', gap: '8px', alignItems: 'center' }}>
         <TextInput
           path={`${path}.newTag`}
-          onChange={(e) => setNewTagValue(e.target.value)}
+          onChange={(e: any) => setNewTagValue(e.target.value)}
           placeholder="Enter tag name"
           onKeyDown={handleKeyPress}
           value={newTagValue}

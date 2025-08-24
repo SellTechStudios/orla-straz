@@ -1,33 +1,26 @@
-// import './styles.css'
 import React from 'react'
-import { ContactNoTeamFound } from '@/app/(frontend)/(page-components)/ContactNoTeamFound/ContactNoTeamFound'
-import MapComponent from '@/app/(frontend)/(page-components)/Map/map'
-import OurTeams from '@/app/(frontend)/(page-components)/OurTeams/OurTeams'
-import HowCanYouHelp from './(page-components)/HowCanYouHelp/HowCanYouHelp'
+import PartnerSection from './(page-components)/PartnerSection/PartnerSection'
 import MissionVision from './(page-components)/MissionVision/MissionVision'
-import PartnerSection from './(page-components)/PartnerSection'
-import Hero4 from './(page-components)/hero4/hero4'
+import HowCanYouHelp from './(page-components)/HowCanYouHelp/HowCanYouHelp'
+import OurTeams from './(page-components)/OurTeams/OurTeams'
+import MapComponent from './(page-components)/Map/MapComponent'
+import Hero from './(page-components)/Hero/Hero'
 
 export default async function HomePage() {
   return (
-    <div className="py-10 home">
-      {/* <Hero /> */}
-      {/* <ContactNoTeamFound />*/}
-
-      <Hero4 />
-      <div className="pt-60">
+    <div className="flex flex-col">
+      <Hero />
+      <div className="mt-30">
         <OurTeams />
       </div>
-      <div className="pt-60">
+      <div className="mt-30">
         <MapComponent />
       </div>
-      <div className="pt-60 gray-bg">
-        <HowCanYouHelp />
-      </div>
-      <div className="pt-60">
+      <HowCanYouHelp />
+      <div className="mt-30">
         <MissionVision />
       </div>
-      <div className="pt-60 pb-60">
+      <div className="mt-30">
         <PartnerSection />
       </div>
     </div>

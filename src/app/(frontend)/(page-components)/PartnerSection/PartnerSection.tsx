@@ -92,25 +92,15 @@ const settings = {
 
 const PartnerSection = () => {
   return (
-    <section className="sponsors">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="sponsorsTitle">
-              <h1>Współpracują z Nami</h1>
-            </div>
+    <section className="container mx-auto" id="partners">
+      <h2 className="text-center">Współpracują z Nami</h2>
+      <Slider {...settings}>
+        {partners.map((partner, pitem) => (
+          <div className="text-center grayscale" key={pitem}>
+            <img src={partner.pImg.src} alt="Logo" />
           </div>
-        </div>
-        <div className="sponsor-slider-active">
-          <Slider {...settings}>
-            {partners.map((partner, pitem) => (
-              <div className="sponsorsItem" key={pitem}>
-                <img src={partner.pImg.src} alt="Logo" />
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
+        ))}
+      </Slider>
     </section>
   )
 }
