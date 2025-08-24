@@ -12,7 +12,7 @@ const MapComponent = () => {
   }
 
   const options = {
-    gestureHandling: 'greedy',
+    gestureHandling: 'cooperative',
     scrollwheel: true,
   }
 
@@ -34,23 +34,14 @@ const MapComponent = () => {
     },
   ]
 
-  const mapKey = process.env.MAP_KEY
+  const mapKey = process.env.NEXT_PUBLIC_MAP_KEY
 
   return (
     <div id="map">
       <LoadScript googleMapsApiKey={mapKey}>
-        <GoogleMap
-          mapContainerStyle={mapStyles}
-          zoom={14}
-          center={defaultCenter}
-          options={options}
-        >
+        <GoogleMap mapContainerStyle={mapStyles} zoom={14} center={defaultCenter} options={options}>
           {markers.map((marker) => (
-            <Marker
-              key={marker.id}
-              position={marker.position}
-              title={marker.title}
-            />
+            <Marker key={marker.id} position={marker.position} title={marker.title} />
           ))}
         </GoogleMap>
       </LoadScript>
